@@ -1,0 +1,6 @@
+framework module Pods_GradeBook_Group2 {
+  umbrella header "Pods-GradeBook-Group2-umbrella.h"
+
+  export *
+  module * { export * }
+}
