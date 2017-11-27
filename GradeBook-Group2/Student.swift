@@ -7,3 +7,17 @@
 //
 
 import Foundation
+class Student{
+    
+//    var listOfStudentsAssignments:[Assignment]?
+//    init(n:String,i:Int) {
+//        name = n
+//        id = i
+//    }
+//    func getName()->String{
+//        return name
+//    }
+//    func getId()->Int{
+//        return id
+//    }
+}

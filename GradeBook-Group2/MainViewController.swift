@@ -39,18 +39,23 @@ class MainViewController: UIViewController {
     
     @IBAction func StudentDidTapped(_ sender: Any) {
         print("student did tapped")
+        performSegue(withIdentifier: "toStudent", sender: self)
     }
     @IBAction func CategoryDidTapped(_ sender: Any) {
         print("category did tapped")
+        performSegue(withIdentifier: "toCategory", sender: self)
     }
     @IBAction func AssignmentDidTapped(_ sender: Any) {
         print("Assignment did tapped")
+        performSegue(withIdentifier: "toAssignment", sender: self)
     }
     @IBAction func GradeDidTapped(_ sender: Any) {
         print("Grade did tapped")
+        performSegue(withIdentifier: "toGrade", sender: self)
     }
     @IBAction func ReportDidTapped(_ sender: Any) {
         print("report did tapped")
+        performSegue(withIdentifier: "toReport", sender: self)
     }
     
     

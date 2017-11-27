@@ -11,7 +11,7 @@ import Firebase
 import GoogleSignIn
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
-
+    var userID: String?
     var window: UIWindow?
 
 
@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
        FirebaseApp.configure()
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate=self
+    
         
         return true
     }
@@ -40,6 +41,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 }
                 guard let uid = user?.uid else{return}
                 print("successfully logged into firebase with google",uid)
+                //write user in database
+                let ref = Database.database().reference(fromURL: "https://gradebook-group2.firebaseio.com/")
+                let userReference = ref.child("users").child(uid)
+                userReference.updateChildValues(["email" : user?.email])
+
+              //  let studentRef = userReference.child("studentID")
+//                let value = ["id":010703030]
+//                studentRef.updateChildValues(value)
+            //    let assignmentListRef = studentRef.child("AssignmentList")
+            
+                
+                
+
+           
+//                arrayOfStudents.append(astudent)
+//                userReference.child(uid).setValue(arrayOfAssignments)
+//                userReference.child(uid).setValue(arrayOfStudents)
+                
             })
         }
     }

@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C420F8D1FCABEF3001D67AC /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C420F8C1FCABEF3001D67AC /* CategoryViewController.swift */; };
+		1C420F8F1FCABFC5001D67AC /* AssignmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C420F8E1FCABFC5001D67AC /* AssignmentViewController.swift */; };
+		1C420F911FCABFDA001D67AC /* GradeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C420F901FCABFDA001D67AC /* GradeViewController.swift */; };
+		1C420F931FCABFE9001D67AC /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C420F921FCABFE9001D67AC /* ReportViewController.swift */; };
 		1C7940851FC2D5D400E6AE61 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7940841FC2D5D400E6AE61 /* Helper.swift */; };
 		1C7940871FC3CC1800E6AE61 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7940861FC3CC1800E6AE61 /* Student.swift */; };
+		1C9867111FCA279C00014CD4 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9867101FCA279C00014CD4 /* Assignment.swift */; };
+		1C9867131FCA3CD800014CD4 /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9867121FCA3CD800014CD4 /* StudentViewController.swift */; };
 		1CE7E8B41FC0C73E007EB6FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE7E8B31FC0C73E007EB6FC /* AppDelegate.swift */; };
 		1CE7E8B61FC0C73E007EB6FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE7E8B51FC0C73E007EB6FC /* ViewController.swift */; };
 		1CE7E8B91FC0C73E007EB6FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CE7E8B71FC0C73E007EB6FC /* Main.storyboard */; };
@@ -28,8 +34,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C420F8C1FCABEF3001D67AC /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		1C420F8E1FCABFC5001D67AC /* AssignmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentViewController.swift; sourceTree = "<group>"; };
+		1C420F901FCABFDA001D67AC /* GradeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeViewController.swift; sourceTree = "<group>"; };
+		1C420F921FCABFE9001D67AC /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		1C7940841FC2D5D400E6AE61 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		1C7940861FC3CC1800E6AE61 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		1C9867101FCA279C00014CD4 /* Assignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
+		1C9867121FCA3CD800014CD4 /* StudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewController.swift; sourceTree = "<group>"; };
 		1CE7E8B01FC0C73E007EB6FC /* GradeBook-Group2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GradeBook-Group2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CE7E8B31FC0C73E007EB6FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CE7E8B51FC0C73E007EB6FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,8 +113,14 @@
 				1CE7E8C51FC0C7E9007EB6FC /* LogInViewController.swift */,
 				1CE7E8C91FC0CDDC007EB6FC /* Resources */,
 				1CE7E8B71FC0C73E007EB6FC /* Main.storyboard */,
+				1C420F8E1FCABFC5001D67AC /* AssignmentViewController.swift */,
+				1C420F901FCABFDA001D67AC /* GradeViewController.swift */,
+				1C420F921FCABFE9001D67AC /* ReportViewController.swift */,
+				1C420F8C1FCABEF3001D67AC /* CategoryViewController.swift */,
 				1C7940861FC3CC1800E6AE61 /* Student.swift */,
+				1C9867101FCA279C00014CD4 /* Assignment.swift */,
 				1CE7E8C71FC0C89A007EB6FC /* MainViewController.swift */,
+				1C9867121FCA3CD800014CD4 /* StudentViewController.swift */,
 				1CE7E8BA1FC0C73E007EB6FC /* Assets.xcassets */,
 				1CE7E8BC1FC0C73E007EB6FC /* LaunchScreen.storyboard */,
 				1CE7E8BF1FC0C73E007EB6FC /* Info.plist */,
@@ -280,11 +298,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C420F911FCABFDA001D67AC /* GradeViewController.swift in Sources */,
 				1CE7E8B61FC0C73E007EB6FC /* ViewController.swift in Sources */,
+				1C9867111FCA279C00014CD4 /* Assignment.swift in Sources */,
 				1C7940871FC3CC1800E6AE61 /* Student.swift in Sources */,
 				1CE7E8B41FC0C73E007EB6FC /* AppDelegate.swift in Sources */,
+				1C9867131FCA3CD800014CD4 /* StudentViewController.swift in Sources */,
+				1C420F8F1FCABFC5001D67AC /* AssignmentViewController.swift in Sources */,
 				1C7940851FC2D5D400E6AE61 /* Helper.swift in Sources */,
+				1C420F931FCABFE9001D67AC /* ReportViewController.swift in Sources */,
 				1CE7E8C61FC0C7E9007EB6FC /* LogInViewController.swift in Sources */,
+				1C420F8D1FCABEF3001D67AC /* CategoryViewController.swift in Sources */,
 				1CE7E8C81FC0C89A007EB6FC /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

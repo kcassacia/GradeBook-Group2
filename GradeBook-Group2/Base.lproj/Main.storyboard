@@ -20,6 +20,19 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="558634-a9213d007640cca0982911e8cea2fa66.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="iwd-hC-M1q">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SgX-7V-Nri">
+                                <rect key="frame" x="172" y="111" width="122" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <state key="normal" title="next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextdidtapped:" destination="Oaa-fK-aR2" eventType="touchUpInside" id="4c2-le-QXJ"/>
+                                    <segue destination="YyS-fg-KfQ" kind="show" identifier="toMain" id="L5p-yc-ys3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -33,15 +46,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A2y-6P-zp1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-345" y="148"/>
+            <point key="canvasLocation" x="-354.39999999999998" y="131.78410794602701"/>
         </scene>
-        <!--View Controller-->
+        <!--Category View Controller-->
         <scene sceneID="MlX-aX-8bK">
             <objects>
-                <viewController id="ebY-Dl-cEK" sceneMemberID="viewController">
+                <viewController id="ebY-Dl-cEK" customClass="CategoryViewController" customModule="GradeBook_Group2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Si1-Hs-yrz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFr-Zo-wyN">
+                                <rect key="frame" x="41" y="572" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backdidtapped:" destination="ebY-Dl-cEK" eventType="touchUpInside" id="tsC-bW-rIb"/>
+                                    <segue destination="YyS-fg-KfQ" kind="show" identifier="categoryBackToMain" id="aJ0-Lh-WnY"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="tvb-zs-GtY"/>
                     </view>
@@ -53,30 +77,78 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dtd-ey-cxg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="172" y="863"/>
+            <point key="canvasLocation" x="172" y="862.21889055472275"/>
         </scene>
-        <!--View Controller-->
+        <!--Student View Controller-->
         <scene sceneID="1be-Kp-mRK">
             <objects>
-                <viewController id="jJY-GW-Xe5" sceneMemberID="viewController">
+                <viewController id="jJY-GW-Xe5" customClass="StudentViewController" customModule="GradeBook_Group2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yr5-FS-xpO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="la2-7Z-tGk">
+                                <rect key="frame" x="37" y="44" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="add student"/>
+                                <connections>
+                                    <action selector="addStudentdidtapped:" destination="jJY-GW-Xe5" eventType="touchUpInside" id="Oj5-cj-GTS"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8SF-A2-PLw">
+                                <rect key="frame" x="139" y="45" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Student ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s3x-rW-eQQ">
+                                <rect key="frame" x="139" y="112" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QtL-6C-Xbz">
+                                <rect key="frame" x="51" y="560" width="34" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backdidtapped:" destination="jJY-GW-Xe5" eventType="touchUpInside" id="xwk-MZ-i7b"/>
+                                    <segue destination="YyS-fg-KfQ" kind="show" identifier="studentBackToMain" id="v4R-f3-Esd"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Xg7-O5-nHi"/>
                     </view>
+                    <connections>
+                        <outlet property="IDTextFIeld" destination="s3x-rW-eQQ" id="t0g-L0-iAu"/>
+                        <outlet property="nameTextField" destination="8SF-A2-PLw" id="2P0-8M-yb4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ZF-Lz-Wfl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="844" y="863.1184407796103"/>
         </scene>
-        <!--View Controller-->
+        <!--Assignment View Controller-->
         <scene sceneID="ZqC-h9-0Uc">
             <objects>
-                <viewController id="38q-pM-NYd" sceneMemberID="viewController">
+                <viewController id="38q-pM-NYd" customClass="AssignmentViewController" customModule="GradeBook_Group2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fuI-Mx-sgx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhY-xy-wqn">
+                                <rect key="frame" x="33" y="598" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backdidtapped:" destination="38q-pM-NYd" eventType="touchUpInside" id="jjG-9Q-p6d"/>
+                                    <segue destination="YyS-fg-KfQ" kind="show" identifier="assignmentBackToMain" id="dh7-bZ-RNk"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="BFg-41-6lc"/>
                     </view>
@@ -85,13 +157,24 @@
             </objects>
             <point key="canvasLocation" x="1508" y="859.52023988005999"/>
         </scene>
-        <!--View Controller-->
+        <!--Grade View Controller-->
         <scene sceneID="oLz-Ak-Hj7">
             <objects>
-                <viewController id="HlJ-pS-9eY" sceneMemberID="viewController">
+                <viewController id="HlJ-pS-9eY" customClass="GradeViewController" customModule="GradeBook_Group2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xlu-eH-NwR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPZ-c7-680">
+                                <rect key="frame" x="41" y="602" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backdidtapped:" destination="HlJ-pS-9eY" eventType="touchUpInside" id="xcT-Oc-zJi"/>
+                                    <segue destination="YyS-fg-KfQ" kind="show" identifier="GradeBackToMain" id="vqG-Zz-ym8"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xdg-gz-E3a"/>
                     </view>
@@ -116,6 +199,7 @@
                                 <state key="normal" title="Student"/>
                                 <connections>
                                     <action selector="StudentDidTapped:" destination="YyS-fg-KfQ" eventType="touchUpInside" id="GPF-ET-nAU"/>
+                                    <segue destination="jJY-GW-Xe5" kind="show" identifier="toStudent" id="QIV-sw-zdl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ej9-3d-EZ0">
@@ -126,6 +210,7 @@
                                 <state key="normal" title="Category"/>
                                 <connections>
                                     <action selector="CategoryDidTapped:" destination="YyS-fg-KfQ" eventType="touchUpInside" id="pn9-C8-kTx"/>
+                                    <segue destination="ebY-Dl-cEK" kind="show" identifier="toCategory" id="1gy-hJ-YMb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIL-Hr-baW">
@@ -136,16 +221,7 @@
                                 <state key="normal" title="Assignment"/>
                                 <connections>
                                     <action selector="AssignmentDidTapped:" destination="YyS-fg-KfQ" eventType="touchUpInside" id="OR3-Ku-Q7j"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wl3-yp-mBM">
-                                <rect key="frame" x="62.5" y="412" width="250" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="Kvf-Sn-ZUA"/>
-                                </constraints>
-                                <state key="normal" title="Grade"/>
-                                <connections>
-                                    <action selector="GradeDidTapped:" destination="YyS-fg-KfQ" eventType="touchUpInside" id="n3p-wR-WxF"/>
+                                    <segue destination="38q-pM-NYd" kind="show" identifier="toAssignment" id="J4R-cH-BEC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62B-Gr-oq4">
@@ -156,6 +232,18 @@
                                 <state key="normal" title="Report"/>
                                 <connections>
                                     <action selector="ReportDidTapped:" destination="YyS-fg-KfQ" eventType="touchUpInside" id="OyZ-aX-wia"/>
+                                    <segue destination="yx6-b0-xvL" kind="show" identifier="toReport" id="jhA-8u-hD5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wl3-yp-mBM">
+                                <rect key="frame" x="62" y="412" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Kvf-Sn-ZUA"/>
+                                </constraints>
+                                <state key="normal" title="Grade"/>
+                                <connections>
+                                    <action selector="GradeDidTapped:" destination="YyS-fg-KfQ" eventType="touchUpInside" id="n3p-wR-WxF"/>
+                                    <segue destination="HlJ-pS-9eY" kind="show" identifier="toGrade" id="UON-GI-JJ8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -191,13 +279,24 @@
             </objects>
             <point key="canvasLocation" x="506" y="148"/>
         </scene>
-        <!--View Controller-->
+        <!--Report View Controller-->
         <scene sceneID="M2R-CC-mIO">
             <objects>
-                <viewController id="yx6-b0-xvL" sceneMemberID="viewController">
+                <viewController id="yx6-b0-xvL" customClass="ReportViewController" customModule="GradeBook_Group2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F98-Bc-g3m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SdS-bD-ClW">
+                                <rect key="frame" x="22" y="607" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backdidtapped:" destination="yx6-b0-xvL" eventType="touchUpInside" id="rZK-kO-1C5"/>
+                                    <segue destination="YyS-fg-KfQ" kind="show" identifier="reportBackToMain" id="G3A-jY-pZT"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fi8-0o-Shs"/>
                     </view>
@@ -206,26 +305,11 @@
             </objects>
             <point key="canvasLocation" x="2972" y="858.62068965517244"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="nhM-0n-9hN">
-            <objects>
-                <navigationController storyboardIdentifier="NavigationVC" automaticallyAdjustsScrollViewInsets="NO" id="oDH-IU-hzh" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jc1-gw-hSf">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="ebY-Dl-cEK" kind="relationship" relationship="rootViewController" id="d0V-GS-E5Z"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NhK-80-WgP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-466" y="860"/>
-        </scene>
     </scenes>
     <resources>
         <image name="558634-a9213d007640cca0982911e8cea2fa66.jpg" width="196" height="350"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="v4R-f3-Esd"/>
+    </inferredMetricsTieBreakers>
 </document>
