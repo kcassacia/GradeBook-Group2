@@ -26,9 +26,9 @@ class LogInViewController: UIViewController,GIDSignInUIDelegate {
     GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().signOut()
     }
-    @IBAction func nextdidtapped(_ sender: UIButton) {
-        performSegue(withIdentifier: "toMain", sender: self)
-    }
+//    @IBAction func nextdidtapped(_ sender: UIButton) {
+//        performSegue(withIdentifier: "toMain", sender: self)
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

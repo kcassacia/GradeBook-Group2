@@ -13,7 +13,7 @@ import Firebase
 
 class AssignmentViewController: UIViewController {
 
-    @IBOutlet weak var PossibleGradeTextField: UITextField!
+//    @IBOutlet weak var PossibleGradeTextField: UITextField!
     @IBOutlet weak var categoryTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBAction func backdidtapped(_ sender: Any) {
@@ -48,9 +48,9 @@ class AssignmentViewController: UIViewController {
     @IBAction func addAssignmentdidtapped(_ sender: Any) {
         print("add assignment did tapped")
         let userid = Firebase.Auth.auth().currentUser?.uid
-        let name = nameTextField.text
+        let name = assignmentTextField.text
         let category = categoryTextField.text
-        guard let possibleGrade: Int? = Int(PossibleGradeTextField.text!) else{return}
+        guard let possibleGrade: Int? = Int(pointsPossibleTextField.text!) else{return}
         print("reached createing list")
         let ref = Database.database().reference(fromURL: "https://gradebook-group2.firebaseio.com/").child("users").child(userid!).child("Students")
         print("reached creating ref")
