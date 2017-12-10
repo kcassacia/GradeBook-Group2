@@ -29,14 +29,14 @@ class StudentViewController: UIViewController {
         let userid = Firebase.Auth.auth().currentUser?.uid
         let ref = Database.database().reference(fromURL: "https://gradebook-group2.firebaseio.com/")
         //let userReference = ref.child("users").child(userid!)
-        var studentID: NSArray = []
+        //var studentID: NSArray = []
      // let studentRef = ref.child().child(userid!)
         let name = nameTextField.text
         print(name)
         let id = IDTextFIeld.text
         print(id)
         let value = ["name":name]
-        ref.child("users").child(userid!).child(id!).setValue(value)
+        ref.child("users").child(userid!).child("Students").child(id!).setValue(value)
        // studentRef.updateChildValues(value)
        // let assignmentListRef = studentRef.child("AssignmentList")
         
