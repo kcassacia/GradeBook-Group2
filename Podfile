@@ -10,6 +10,5 @@ target 'GradeBook-Group2' do
 pod 'Firebase/Database'
 pod 'Firebase/Storage'
   # Pods for GradeBook-Group2
-pod 'RNNotificationView', '~> 3.0'
-pod 'XlsxReaderWriter', '~> 1.0'
+
 end

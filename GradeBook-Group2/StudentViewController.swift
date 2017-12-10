@@ -10,8 +10,6 @@ import UIKit
 import Firebase
 import GoogleSignIn
 import FirebaseAuth
-import RNNotificationView
-
 
 class StudentViewController: UIViewController {
     
@@ -41,15 +39,7 @@ class StudentViewController: UIViewController {
         ref.child("users").child(userid!).child(id!).setValue(value)
        // studentRef.updateChildValues(value)
        // let assignmentListRef = studentRef.child("AssignmentList")
-        RNNotificationView.show(withImage: UIImage(named: "sambleIcon"),
-                                title: "Congratulations!",
-                                message: "You have successfully added a new student.",
-                                duration: 2,
-                                iconSize: CGSize(width: 22, height: 22), // Optional setup
-            onTap: {
-                print("Did tap notification")
-        }
-        )
+        
     }
     
     override func viewDidLoad() {
