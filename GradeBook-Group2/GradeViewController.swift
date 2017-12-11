@@ -81,7 +81,7 @@ class GradeViewController: UIViewController ,UIPickerViewDelegate,UIPickerViewDa
                 print("key = \(key)  value = \(value!)")
             }
         })
-        print("assignemts is here:",assignments)
+        print("assignments is here:",assignments)
           self.StudentPickerView.reloadAllComponents()
         self.AssignmentPickerView.reloadAllComponents()
     }
