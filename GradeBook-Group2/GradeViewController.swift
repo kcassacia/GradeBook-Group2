@@ -54,7 +54,7 @@ class GradeViewController: UIViewController ,UIPickerViewDelegate,UIPickerViewDa
        
     }
     @IBAction func submitButtondidtapped(_ sender: Any) {
-        var score = textBox.text
+        let score = Int(textBox.text!)
         let scoreValue = ["score":score]
         let assignmentRef = Database.database().reference(fromURL: "https://gradebook-group2.firebaseio.com/").child("users").child(userid!).child("Students").child(selectStudentLabel.text!).child("Assignments").child(selectassignmentLabel.text!)
         assignmentRef.updateChildValues(scoreValue)
